@@ -26,7 +26,7 @@ while True:
             print("1.Brave 2.Firefox")
             choice = input("Seleccione una opción (1-2): ")
             if choice == "1":
-                os.system("rm -rf ~/.cache/BraveSoftware/Brave-Origin")
+                os.system("rm -rf ~/.cache/BraveSoftware")
             elif choice == "2":
                 os.system("rm -rf ~/.cache/Mozilla/Firefox")
         case "5":
