@@ -1,7 +1,6 @@
 import os
 import json
 
-
 while True:
     print("\n=== Opciones ===")
     print("1. Actualizar el sistema")
@@ -13,12 +12,22 @@ while True:
     opcion = input("Seleccione una opción (1-5): ")
     match opcion:
         case "1":
-            os.system("paru && flatpak update")
+            print("1.Yay 2.Paru")
+            choice = input("Seleccione una opción (1-2): ")
+            if choice == "1":
+                os.system("yay && flatpak update")
+            elif choice == "2":
+                os.system("paru && flatpak update")
         case "2":
             os.system("sudo pacman -Rns $(pacman -Qtdq)")
         case "3":
             os.system("sudo paccache -r")
         case "4":
-            os.system("rm -rf ~/.cache/BraveSoftware/Brave-Origin")
+            print("1.Brave 2.Firefox")
+            choice = input("Seleccione una opción (1-2): ")
+            if choice == "1":
+                os.system("rm -rf ~/.cache/BraveSoftware/Brave-Origin")
+            elif choice == "2":
+                os.system("rm -rf ~/.cache/Mozilla/Firefox")
         case "5":
             break
